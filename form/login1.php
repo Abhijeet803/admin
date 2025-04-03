@@ -19,7 +19,7 @@ if(mysqli_num_rows($result)){
 <script>
 alert('Login Successfully');
   
- window.location.href = '../../mystore.php';
+ window.location.href = '../mystore.php';
 
 </script>
 

@@ -16,10 +16,10 @@
 
 <?php
 
-// session_start();
-// if(!$_SESSION['admin']){
-//   header("location:form/login.php");
-// }
+ session_start();
+if(!$_SESSION['admin']){
+  header("location:form/login.php");
+ }
 
 ?>
 
@@ -33,9 +33,9 @@
 
       <span>
         <i class="fas fa-user-tie"></i> <!-- Corrected FontAwesome icon classes -->
-          Hello,  <?php echo $_SESSION['admin']; ?>   
+         Hello,  <!-- Hello,  <?php echo $_SESSION['admin']; ?>     -->
         <i class="fas fa-right-from-bracket"></i>
-        <a href="product/form/logout.php" class="text-decoration-none text-white"> Logout</a>
+        <a href="form/logout.php" class="text-decoration-none text-white"> Logout</a>
         <!-- Removed empty href, you can add a real link for UserPanel if needed -->
         <a href="#" class="text-decoration-none text-white"> UserPanel</a> 
       </span>
