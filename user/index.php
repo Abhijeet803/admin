@@ -27,37 +27,40 @@
                 while ($row = mysqli_fetch_array($Record)) {
 
                     $check_Page = $row['PCategory']; // Correct
+                
 
-                    
-                      if($check_Page === 'Home'){ 
+                    if ($check_Page === 'Home') {
 
 
-                    echo "
-  <div class='col-md-6 col-lg-lg-4 m-auto mb-3 '>
-  <form action = 'Insertcart.php' method = 'POST'>
-  <div class='card m-auto' style='width: 18rem;'>
-  <img src='../admin/product/$row[PImage]' class='card-img-top' >
-  <div class='card-body text-center'>
-    <h5 class='card-title text-danger fs-4 fw-bold'>$row[PName]</h5>
-    <p class='card-text text-danger fs-4 fw-bold'>RS: $row[PPrice]</p>
-    <input type -'hidden' name = 'PName' value = '$row[PName]' >
-     <input type -'hidden' name = 'PPrice' value = '$row[PPrice]' >
-  <input type='number' name = 'PQuantity' value = ' min='1' max ='20''s placeholder = 'Quantity'><br><br>
-  <input type='submit' name = 'addCart' class= 'btn btn-warning text-white w-100' value= 'Add To Cart'>
+                        echo "
+                    <div class='col-md-6 col-lg-4 m-auto mb-3'>
+                    <form action ='Insertcart.php' method ='POST'>
+                    <div class='card m-auto' style='width: 18rem;'>
+                    <img src='/ecommerce/admin/product/$row[PImage]' class='card-img-top' style ='height: 300px; ' >
+                    <div class='card-body text-center'>
+                    <h5 class='card-title text-danger fs-4 fw-bold'>$row[PName]</h5>
+                    <p class='card-text text-danger fs-4 fw-bold'>RS: $row[PPrice]</p>
+                    <input type = 'hidden' name ='PName' value ='$row[PName]'>
+                      <input type = 'hidden' name ='PPrice' value ='$row[PPrice]'>
+                    <input type='number' name='PQuantity' value=' min='1' max='20' ' placeholder='Quantity'><br><br>
+                    <input type='submit' name = 'addCart' class= 'btn btn-warning text-white w-100' value= 'Add To Cart'>
     
-  </div>
-</div>
-</form>
-</div>
+
+ </div>
+        </div>
+        </form
+    </div>
+   
+
+
+
 ";
 
+                    }
                 }
-            }
                 ?>
 
-            </div>
-        </div>
-    </div>
+</div>
 
 </body>
 

@@ -62,7 +62,8 @@ include 'header.php';
                                     </tr>
                                 </form>
                                 ";
-                            } else {
+                             } 
+                             else {
                                 // Handle the case where the expected keys are missing
                                 echo "<tr><td colspan='7'>Product data is missing.</td></tr>";
                             }

@@ -30,8 +30,8 @@ if (isset($_SESSION['cart'])) {
         <a class="navbar-brand pb-2"><img src="trapigo_private_ltd_logo.JPEG" alt="Logo"></a>
         
         <div class="d-flex">
-            <a href="" class="text-warning text-decoration-none pe-2"><i class="fa-solid fa-house"></i>Home</a>
-            <a href="" class="text-warning text-decoration-none pe-2"><i class="fa-solid fa-cart-shopping"></i>Cart(<?php echo $count ?>) |</a>
+            <a href="index.php" class="text-warning text-decoration-none pe-2"><i class="fa-solid fa-house"></i>Home</a>
+            <a href="viewCart.php" class="text-warning text-decoration-none pe-2"><i class="fa-solid fa-cart-shopping"></i>Cart(<?php echo $count ?>) |</a>
 
             <span class="text-warning pe-2">
                 <i class="fa-solid fa-user"></i>Hello,  |
@@ -52,7 +52,7 @@ if (isset($_SESSION['cart'])) {
                 }
                 ?>
                  
-                <a href="../admin/mystore.php" class="text-warning text-decoration-none pe-2">Admin</a>
+                <a href="../mystore.php" class="text-warning text-decoration-none pe-2">Admin</a>
             </span>
         </div>
     </div>
