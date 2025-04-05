@@ -14,11 +14,12 @@ if(mysqli_num_rows($result)){
     echo "
 <script>
 alert('Successfully Login');
-window.location.href= '../index.php.php'
+window.location.href= '../index.php'
 </script>
 
         ";
 }
+
 else{
     echo "
 <script>

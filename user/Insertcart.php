@@ -4,6 +4,10 @@
 
 session_start();
 
+if(isset($_SESSION['user'])){ 
+
+
+
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
@@ -73,7 +77,10 @@ if (isset($_POST['update'])) {
 
 
 
-
+}
+else{
+    header("location:form/login.php");
+}
 
 
 

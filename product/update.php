@@ -15,7 +15,7 @@
 
 <?php
 
-$id = $_GET['Id'];
+$id = $_GET['ID'];
 include 'Config.php';
 $Record =mysqli_query($con ,"SELECT * FROM `tblproduct` WHERE Id ='$id '");
 $data = mysqli_fetch_array($Record);
@@ -55,7 +55,7 @@ $data = mysqli_fetch_array($Record);
                             <option value="Mobile">Mobile</option>
                         </select>
                     </div>
-                    <input type="hidden" name="id" value="<?php echo $data['ID'] ?>">
+                     <input type="hidden" name="id" value="<?php echo $data['Id'] ?> ">
                     <button name=" update" class="bg-danger fs-4 fw-bold my-3 form-control text-white">Update</button>
 
                 </form>
@@ -66,7 +66,7 @@ $data = mysqli_fetch_array($Record);
 
 
         <!-- PHP UPDATE CODE -->
-
+<!-- 
         <?php
 
 if(isset($_POST['update'])){
@@ -91,9 +91,10 @@ header("location:index.php");
 
 }
 
-        ?>
+        ?> -->
 
 
 </body>
 
 </html>
+

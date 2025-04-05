@@ -25,15 +25,23 @@ window.location.href= 'register.php'
 
     if (mysqli_num_rows($Dup_username)) {
         echo "
+        <script>
+        alert('This UserName is already taken');
+        window.location.href= 'register.php'
+        </script>
+        
+                ";
+        
+    }
+    else {
+        mysqli_query($Con, "INSERT INTO `tbluser`(`UserName`, `Email`, `Number`, `Password`) VALUES ('$name','$email','$number','$password')");
+        echo "
 <script>
 alert('Registered Successfully');
 window.location.href= 'login.php'
 </script>
 
         ";
-    }
-    else {
-        mysqli_query($Con, "INSERT INTO `tbluser`(`UserName`, `Email`, `Number`, `Password`) VALUES ('$name','$email','$number','$password')");
 
     }
 
